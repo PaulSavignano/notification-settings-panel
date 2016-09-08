@@ -5,7 +5,7 @@ import { Loading } from '../components/loading'
 
 const composer = (params, onData) => {
   const subscription = Meteor.subscribe('users.notifications')
-  if (subscription.read()) {
+  if (subscription.ready()) {
     const user = Meteor.users.findOne()
     const notifications = user && user.profile ? user.profile.notifications : {}
     onData(null, { notifications })

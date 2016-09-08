@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Panel, Table } from 'react-bootstrap'
 import { Meteor } from 'meteor/meteor'
 import { Bert } from 'meteor/themeteorchef:bert'
-import { toggleSwitch } from './toggle-switch'
+import { ToggleSwitch } from './toggle-switch'
 
 export class Notifications extends Component {
   constructor(props) {
