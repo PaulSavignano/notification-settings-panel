@@ -1,9 +1,11 @@
 @import "base/extends";
 @import "base/animations";
 @import "base/forms";
+@import "base/tables";
 
 @import "module/loading";
 @import "module/login";
 @import "module/signup";
+@import "module/toggle-switch";
 
 @import "state/navbar";
