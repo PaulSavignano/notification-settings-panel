@@ -9,6 +9,13 @@ export class Notifications extends Component {
     super(props)
     this.notifications = this.notifications.bind(this)
   }
+  handleNotificationPreferencesUpdate(type, value) {
+    Meteor.call('users.updateNotificationPreference', { type, value }, (error) => {
+      if (error) {
+        Bert.alert(error.reason, 'danger')
+      }
+    })
+  }
   notifications() {
     const { notifications } = this.props
     return [{
